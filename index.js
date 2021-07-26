@@ -44,8 +44,8 @@ app.use('/', require('./cloud/main.js').app);
 app.use(mountPath, api);
 
 const httpServer = require('http').createServer(app);
-httpServer.listen(port, () => {
-    console.log(`Running on http://localhost:${port}`);
+httpServer.listen(port,'0.0.0.0', () => {
+    console.log(`Running on http://0.0.0.0:${port}`);
 });
 
 // This will enable the Live Query real-time server
